@@ -13,10 +13,10 @@ public class GameState : MonoBehaviour
     private const float DRAW_DELTA_TIME = 5.0f;
 
     // Managers
-    private BoardManager BoardManager { get; } = new BoardManager();
-    private PlayerCardManager PlayerCardManager { get; } = new PlayerCardManager();
-    private ResourceManager ResourceManager { get; } = new ResourceManager();
-    private EnemyCardManager EnemyCardManager { get; } = new EnemyCardManager();
+    public BoardManager BoardManager { get; private set; }
+    public PlayerCardManager PlayerCardManager { get; private set; }
+    public ResourceManager ResourceManager { get; private set; }
+    public EnemyCardManager EnemyCardManager { get; private set; }
 
     private float NextActionTime = ACTION_DELTA_TIME;
     private float NextDrawTime = DRAW_DELTA_TIME;
@@ -26,6 +26,11 @@ public class GameState : MonoBehaviour
 
     private void Awake()
     {
+        BoardManager = gameObject.AddComponent<BoardManager>();
+        PlayerCardManager = gameObject.AddComponent<PlayerCardManager>();
+        ResourceManager = gameObject.AddComponent<ResourceManager>();
+        EnemyCardManager = gameObject.AddComponent<EnemyCardManager>();
+
         if (_instance != null && _instance != this)
         {
             Destroy(this.gameObject);
@@ -34,12 +39,6 @@ public class GameState : MonoBehaviour
         {
             _instance = this;
         }
-    }
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
     }
 
     // Update is called once per frame

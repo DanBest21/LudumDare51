@@ -6,17 +6,5 @@ public class Character : MonoBehaviour
 {
     [SerializeField]
     private string Name;
-    private List<CharacterCondition> Conditions = new List<CharacterCondition>();
-    
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    public List<CharacterCondition> Conditions { get; private set; } = new List<CharacterCondition>();
 }
