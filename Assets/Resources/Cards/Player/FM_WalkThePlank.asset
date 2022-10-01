@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: Walk The Plank
   Description: 
-  Image: {fileID: 21300000, guid: 7814be2f4d6aef94eb26e105ed0a8815, type: 3}
+  Image: {fileID: 21300000, guid: 90f30037220fb324ca9c1a85a79d4c98, type: 3}
   CardEffects: []
   CrewMember: {fileID: 0}

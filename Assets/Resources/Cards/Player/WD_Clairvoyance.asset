@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: Clairvoyance
   Description: 
-  Image: {fileID: 21300000, guid: e44e33921cd3ee746b037a7e42ca9e67, type: 3}
+  Image: {fileID: 21300000, guid: 9b5b5e26eb0a78d429a86f16be880aeb, type: 3}
   CardEffects: []
   CrewMember: {fileID: 0}

@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: Salvage Loot
   Description: 
-  Image: {fileID: 21300000, guid: c4791a3e026343e4c8ff66954ba38fff, type: 3}
+  Image: {fileID: 21300000, guid: f2a6db06c28dcb44e9fe25e6d0e0af6a, type: 3}
   CardEffects: []
   CrewMember: {fileID: 0}

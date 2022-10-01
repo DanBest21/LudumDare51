@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: Medical Attention
   Description: 
-  Image: {fileID: 21300000, guid: 8a5e21654a61375499386e49f4e06eee, type: 3}
+  Image: {fileID: 21300000, guid: 0aa1408b0cd824746bb75b2dc12ee274, type: 3}
   CardEffects: []
   CrewMember: {fileID: 0}

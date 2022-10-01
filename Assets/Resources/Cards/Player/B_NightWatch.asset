@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: Night Watch
   Description: 
-  Image: {fileID: 21300000, guid: b1e5da77a451a3d418f26b8b1b4d156b, type: 3}
+  Image: {fileID: 21300000, guid: 7ef2bb3b6d69d4b4488c84e6f2d049a3, type: 3}
   CardEffects: []
   CrewMember: {fileID: 0}

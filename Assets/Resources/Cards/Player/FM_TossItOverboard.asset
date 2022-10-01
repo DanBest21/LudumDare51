@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: Toss It Overboard
   Description: 
-  Image: {fileID: 21300000, guid: ea5d24a80e23d5d46b5bc125ce635685, type: 3}
+  Image: {fileID: 21300000, guid: 38ed5e6c0143b004ca0f5757dfcdc29c, type: 3}
   CardEffects: []
   CrewMember: {fileID: 0}

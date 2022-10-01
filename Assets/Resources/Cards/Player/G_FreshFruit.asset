@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: Fresh Fruit
   Description: 
-  Image: {fileID: 21300000, guid: 99adc87d420fafb44b35a57acc21a70d, type: 3}
+  Image: {fileID: 21300000, guid: bdc106d667ea3af41ab6412155b8d9e0, type: 3}
   CardEffects: []
   CrewMember: {fileID: 0}

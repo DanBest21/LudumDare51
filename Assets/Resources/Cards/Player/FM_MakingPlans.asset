@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: Making Plans
   Description: 
-  Image: {fileID: 21300000, guid: c36f52994b4ffbf439e84fb65ab5b777, type: 3}
+  Image: {fileID: 21300000, guid: fad5be268af85974ca72a3010c823fa8, type: 3}
   CardEffects: []
   CrewMember: {fileID: 0}

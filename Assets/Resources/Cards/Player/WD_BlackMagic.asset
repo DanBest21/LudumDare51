@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: Black Magic
   Description: 
-  Image: {fileID: 21300000, guid: 475a3e6c09b9fa743a216ca5544f18ad, type: 3}
+  Image: {fileID: 21300000, guid: e39a067f1559be8469aef45214f4d4fb, type: 3}
   CardEffects: []
   CrewMember: {fileID: 0}
