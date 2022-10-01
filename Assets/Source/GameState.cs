@@ -4,12 +4,36 @@ using UnityEngine;
 
 public class GameState : MonoBehaviour
 {
+    private static GameState _instance;
+
+    public static GameState Instance { get { return _instance; } }
+
     // Constants
-    private const double ACTION_DELTA_TIME = 10.0f;
+    private const float ACTION_DELTA_TIME = 10.0f;
+    private const float DRAW_DELTA_TIME = 5.0f;
 
-    private double NextActionTime = 10.0f;
+    // Managers
+    private PlayerCardManager PlayerCardManager = new PlayerCardManager();
+    private ResourceManager ResourceManager = new ResourceManager();
+    private EnemyCardManager EnemyCardManager = new EnemyCardManager();
 
-    private List<Card> PlayerDeck { get; }
+    private float NextActionTime = ACTION_DELTA_TIME;
+    private float NextDrawTime = DRAW_DELTA_TIME;
+
+    [SerializeField]
+    private List<Task> TaskQueue;
+
+    private void Awake()
+    {
+        if (_instance != null && _instance != this)
+        {
+            Destroy(this.gameObject);
+        }
+        else
+        {
+            _instance = this;
+        }
+    }
 
     // Start is called before the first frame update
     void Start()
@@ -20,7 +44,16 @@ public class GameState : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Time.timeSinceLevelLoad >= NextActionTime)
+        float currentTime = Time.timeSinceLevelLoad;
+
+        if (currentTime >= NextDrawTime)
+        {
+            NextDrawTime += DRAW_DELTA_TIME;
+
+            // Draw a card here...
+        }
+
+        if (currentTime >= NextActionTime)
         {
             NextActionTime += ACTION_DELTA_TIME;
 
