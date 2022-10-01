@@ -2,12 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Character : MonoBehaviour
+public class BoardManager : MonoBehaviour
 {
-    [SerializeField]
-    private string Name;
-    private List<CharacterCondition> Conditions = new List<CharacterCondition>();
-    
+    private const int MAXIMUM_ACTIVE_CARDS = 5;
+
+    private List<PlayerCard> ActiveCards { get; } = new List<PlayerCard>(MAXIMUM_ACTIVE_CARDS);
+
     // Start is called before the first frame update
     void Start()
     {

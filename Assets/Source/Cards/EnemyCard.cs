@@ -2,12 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Character : MonoBehaviour
+public class EnemyCard : MonoBehaviour
 {
-    [SerializeField]
-    private string Name;
-    private List<CharacterCondition> Conditions = new List<CharacterCondition>();
-    
     // Start is called before the first frame update
     void Start()
     {

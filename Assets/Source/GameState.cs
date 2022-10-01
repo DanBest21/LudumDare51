@@ -13,15 +13,16 @@ public class GameState : MonoBehaviour
     private const float DRAW_DELTA_TIME = 5.0f;
 
     // Managers
-    private PlayerCardManager PlayerCardManager = new PlayerCardManager();
-    private ResourceManager ResourceManager = new ResourceManager();
-    private EnemyCardManager EnemyCardManager = new EnemyCardManager();
+    private BoardManager BoardManager { get; } = new BoardManager();
+    private PlayerCardManager PlayerCardManager { get; } = new PlayerCardManager();
+    private ResourceManager ResourceManager { get; } = new ResourceManager();
+    private EnemyCardManager EnemyCardManager { get; } = new EnemyCardManager();
 
     private float NextActionTime = ACTION_DELTA_TIME;
     private float NextDrawTime = DRAW_DELTA_TIME;
 
     [SerializeField]
-    private List<Task> TaskQueue;
+    private Queue<Task> TaskQueue = new Queue<Task>();
 
     private void Awake()
     {
@@ -50,7 +51,7 @@ public class GameState : MonoBehaviour
         {
             NextDrawTime += DRAW_DELTA_TIME;
 
-            // Draw a card here...
+            PlayerCardManager.DrawCard();
         }
 
         if (currentTime >= NextActionTime)
