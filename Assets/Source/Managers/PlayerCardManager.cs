@@ -32,7 +32,7 @@ public class PlayerCardManager : MonoBehaviour
         {
             Hand.Enqueue(PlayerDeck.Pop());
 
-            if (Hand.Count >= MAXIMUM_CARDS_IN_HAND)
+            if (Hand.Count > MAXIMUM_CARDS_IN_HAND)
             {
                 DiscardPile.Push(Hand.Dequeue());
             }

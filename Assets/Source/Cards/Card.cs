@@ -4,7 +4,7 @@ using UnityEngine;
 
 public abstract class Card : ScriptableObject
 {
-    public static Vector2 CARD_SIZE { get; } = new Vector2(200.0f, 300.0f);
+    public static Vector2 CARD_SIZE { get; } = new Vector2(160.0f, 240.0f);
 
     public string Name;
     public string Description;
