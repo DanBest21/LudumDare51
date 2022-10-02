@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: -8336395643643670672}
   - component: {fileID: 7887599624465778009}
   m_Layer: 0
-  m_Name: Card
+  m_Name: Event
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -38,7 +38,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 150, y: 215}
+  m_SizeDelta: {x: 300, y: 300}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &3635565724086611725
 MonoBehaviour:
@@ -83,7 +83,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: a52cb2088a7cf4443ac52ea18e8c564e, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 01358dc25bc19914a95220938413f3c1, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
