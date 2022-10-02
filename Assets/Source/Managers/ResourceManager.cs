@@ -4,16 +4,31 @@ using UnityEngine;
 
 public class ResourceManager : MonoBehaviour
 {
-    [Range(0, 100)]
-    private int CrewCount;
-    [Range(0, 100)]
-    private int Morale;
-    [Range(0, 100)]
-    private int Health;
-    [Range(0, 100)]
-    private int Fatigue;
-    [Range(0, 100)]
-    private int Supplies;
-    [Range(0, 100)]
-    private int Sanity;
+    public enum EResourceType
+    {
+        CrewCount, // 0
+        Morale, // 1
+        Health, // 2
+        Fatigue, // 3
+        Supplies, // 4
+        Sanity, // 5
+        COUNT
+    }
+
+    private Dictionary<EResourceType, int> ResourceDict = new Dictionary<EResourceType, int>((int)EResourceType.COUNT);
+
+    private void Awake()
+    {
+        foreach (EResourceType ResourceType in System.Enum.GetValues(typeof(EResourceType)))
+        {
+            ResourceDict.Add(ResourceType, 50);
+        }
+    }
+
+    public void ModifyResource(EResourceType Type, int Delta)
+    {
+        ResourceDict[Type] += Delta;
+
+        // Probably some checks here to see if we're dead.
+    }
 }

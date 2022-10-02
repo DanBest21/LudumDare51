@@ -15,5 +15,6 @@ MonoBehaviour:
   Name: Brutish Force
   Description: 
   Image: {fileID: 21300000, guid: 37a45f5b3c1524c40baa985face31b94, type: 3}
-  CardEffects: []
+  CardEffects:
+  - {fileID: 11400000, guid: 3794ad08068e12944babf205e16fd485, type: 2}
   CrewMember: {fileID: 0}

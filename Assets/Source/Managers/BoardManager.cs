@@ -16,6 +16,50 @@ public class BoardManager : MonoBehaviour
         this.Board = GameObject.Find("Board"); 
     }
 
+    public void Update()
+    {
+        List<int> IndicesToRemove = new List<int>();
+
+        for (int i = 0; i < ActiveCards.Count; i++)
+        {
+            ActiveCard CurrentCard = ActiveCards[i];
+            PlayerCard CardInfo = CurrentCard.CardInfo;
+
+            if (CardInfo.CardType == Card.ECardType.Instant)
+            {
+                foreach (CardEffect Effect in CardInfo.CardEffects)
+                {
+                    Effect.ApplyInstantEffect();
+                }
+
+                IndicesToRemove.Add(i);
+            }
+        }
+
+        int IndicesRemoved = 0;
+
+        foreach (int Index in IndicesToRemove)
+        {
+            ActiveCard CurrentCard = ActiveCards[Index - IndicesRemoved];
+
+            if (CurrentCard.CardStatus == ActiveCard.ECardStatus.Discarded)
+            {
+                ActiveCards.RemoveAt(Index - IndicesRemoved);
+
+                IndicesRemoved++;
+            }
+            else if (CurrentCard.CardStatus != ActiveCard.ECardStatus.Discarding)
+            {
+                CurrentCard.DiscardCard();
+            }
+        }
+
+        if (IndicesRemoved > 0)
+        {
+            ReshuffleBoard();
+        }
+    }
+
     public void PlayCard(ActiveCard NewCard)
     {
         NewCard.Position = ActiveCards.Count;

@@ -10,4 +10,12 @@ public abstract class Card : ScriptableObject
     public string Description;
     public Sprite Image;
     public List<CardEffect> CardEffects;
+
+    public enum ECardType
+    {
+        Instant,
+        Persistent
+    }
+
+    public ECardType CardType;
 }
